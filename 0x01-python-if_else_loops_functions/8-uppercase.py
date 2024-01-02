@@ -1,12 +1,18 @@
 #!/usr/bin/python3
 
-def uppercase(input_str):
-    for char in input_str:
+def uppercase(some_str):
+    for char in some_str:
+        # Check if the character is lowercase
         if 97 <= ord(char) <= 122:
-            uppercase_char = chr(ord(char) - 32)
+            # Convert the lowercase character to uppercase using ASCII values
+            upper_char = chr(ord(char) - 32)
+            # Print the uppercase character without a newline
+            print(upper_char, end="")
         else:
-            uppercase_char = char
-        print("{}".format(uppercase_char), end="")
+            # Print characters other than lowercase letters
+            print(char, end="")
+    
+    # Print a newline after processing the string
     print()
 
 # Example usage:
