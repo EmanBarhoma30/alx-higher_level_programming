@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-
-def is_lowercase(c):
-    return 97 <= ord(c) <= 122
-
-# Example usage:
-# result = is_lowercase('a')
-# print(result)
+def islower(c):
+    if ord(c) >= 97 and ord(c) <= 122:
+        return True
+    else:
+        return False
