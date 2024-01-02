@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-def fizzbuzz():
-    output = []
-    for i in range(1, 101):
-        if i % 3 == 0 and i % 5 == 0:
-            output.append("FizzBuzz")
-        elif i % 3 == 0:
-            output.append("Fizz")
-        elif i % 5 == 0:
-            output.append("Buzz")
-        else:
-            output.append(str(i))
-    print(' '.join(output))
+def alternate_fizzbuzz():
+    for num in range(1, 101):
+        output = ""
+        if num % 3 == 0:
+            output += "Fizz"
+        if num % 5 == 0:
+            output += "Buzz"
+        if output == "":
+            output = str(num)
+        print(output + " ", end="")
