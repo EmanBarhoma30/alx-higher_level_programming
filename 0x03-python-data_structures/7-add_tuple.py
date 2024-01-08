@@ -6,10 +6,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     result_tuple = (a[0] + b[0], a[1] + b[1])
     return result_tuple
-
-# Example usage:
-if __name__ == "__main__":
-    tuple_a = (1, 2)
-    tuple_b = (3, 4)
-    result = add_tuple(tuple_a, tuple_b)
-    print("Result Tuple:", result)
