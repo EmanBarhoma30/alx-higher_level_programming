@@ -10,19 +10,17 @@ def list_division(my_list_1, my_list_2, list_length):
 
             if not (isinstance(value_1, (int, float)) and isinstance(value_2, (int, float))):
                 raise TypeError("wrong type")
-
-            if value_2 == 0:
                 raise ZeroDivisionError("division by 0")
 
             result = value_1 / value_2
             result_list.append(result)
 
-        except TypeError as e:
-            print(e)
+        except TypeError:
+            print("wrong type")
             result_list.append(0)
 
-        except ZeroDivisionError as e:
-            print(e)
+        except ZeroDivisionError:
+            print("division by 0")
             result_list.append(0)
 
         except IndexError:
