@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+Module: Square
+"""
+
+
 class Square:
     """
     Class: Square
@@ -11,11 +16,10 @@ class Square:
         Constructor.
 
         Args:
-            size (int): Length of the side of the square. Default is 0.
+            size (int): The size of the new square.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        self.__size = size
