@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class."""
+"""Rectangle class definition."""
 
 
 class Rectangle:
@@ -8,9 +8,8 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
 
-        Args:
-            width (int): The width of the new rectangle.
-            height (int): The height of the new rectangle.
+        :param width: The width of the new rectangle.
+        :param height: The height of the new rectangle.
         """
         self._width = width
         self._height = height
@@ -22,6 +21,12 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
+        """Set the width of the rectangle.
+
+        :param value: The new width value.
+        :raises TypeError: If the width is not an integer.
+        :raises ValueError: If the width is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -35,6 +40,12 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
+        """Set the height of the rectangle.
+
+        :param value: The new height value.
+        :raises TypeError: If the height is not an integer.
+        :raises ValueError: If the height is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
