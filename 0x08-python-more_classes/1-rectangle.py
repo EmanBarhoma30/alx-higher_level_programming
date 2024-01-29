@@ -1,27 +1,35 @@
 #!/usr/bin/python3
-"""Rectangle class definition."""
+"""
+Defines a Rectangle class.
+"""
 
 
 class Rectangle:
-    """Represent a rectangle."""
+    """
+    Represents a rectangle.
+    """
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle.
+        """
+        Initializes a new Rectangle.
 
         :param width: The width of the new rectangle.
         :param height: The height of the new rectangle.
         """
-        self._width = width
-        self._height = height
+        self.set_width(width)
+        self.set_height(height)
 
-    @property
-    def width(self):
-        """Get the width of the rectangle."""
+    def get_width(self):
+        """
+        Retrieves the width of a Rectangle instance.
+
+        :return: The width of the rectangle.
+        """
         return self._width
 
-    @width.setter
-    def width(self, value):
-        """Set the width of the rectangle.
+    def set_width(self, value):
+        """
+        Sets the width of a Rectangle instance.
 
         :param value: The new width value.
         :raises TypeError: If the width is not an integer.
@@ -33,14 +41,17 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self._width = value
 
-    @property
-    def height(self):
-        """Get the height of the rectangle."""
+    def get_height(self):
+        """
+        Retrieves the height of a Rectangle instance.
+
+        :return: The height of the rectangle.
+        """
         return self._height
 
-    @height.setter
-    def height(self, value):
-        """Set the height of the rectangle.
+    def set_height(self, value):
+        """
+        Sets the height of a Rectangle instance.
 
         :param value: The new height value.
         :raises TypeError: If the height is not an integer.
@@ -51,3 +62,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self._height = value
+
+    width = property(get_width, set_width, doc="Width of the Rectangle")
+    height = property(get_height, set_height, doc="Height of the Rectangle")
